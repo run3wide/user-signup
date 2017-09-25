@@ -3,23 +3,21 @@
 {% block content %}
 
 <form action="/signup" method="post">
-    <label>
-        Username:
-        <input type="text" name="username" />
-    </label>
-    <label>
-        Password:
-        <input type="text" name="password" />
-    </label>
-    <label>
-        Please retype password:
-        <input type="text" name="password-confirm" />
-    </label>
-    <label>
-        Email address:
-        <input type="text" name="email" />
-    </label>
-    <input type="submit" value="Submit" />
+    <div>
+        <input type="text" name="username" placeholder="Username" />
+    </div>
+    <div>
+        <input type="text" name="password" placeholder="Password" />
+    </div>
+    <div>
+        <input type="text" name="password-confirm" placeholder="Please confirm password"
+    </div>
+    <div>
+        <input type="text" name="email" placeholder="Email (optional)" />
+    </div>
+    <div>
+        <input type="submit" value="Submit" />
+    </div>
 </form>
 {% endblock %}
 
