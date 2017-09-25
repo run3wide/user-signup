@@ -1,10 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="/signup" method="post">
+    <label>
+        Username:
+        <input type="text" name="username" />
+    </label>
+    <label>
+        Password:
+        <input type="text" name="password" />
+    </label>
+    <label>
+        Please retype password:
+        <input type="text" name="password-confirm" />
+    </label>
+    <label>
+        Email address:
+        <input type="text" name="email" />
+    </label>
+    <input type="submit" value="Submit" />
+</form>
+{% endblock %}
+
