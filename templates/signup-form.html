@@ -2,18 +2,27 @@
 
 {% block content %}
 
-<form action="/signup" method="post">
+<form action="/confirmation" method="post">
     <div>
         <input type="text" name="username" placeholder="Username" />
+        {% if username_error %}
+        <p class='error'>{{ username_error }}</p>
+        {% endif %}
     </div>
     <div>
-        <input type="text" name="password" placeholder="Password" />
+        <input type="password" name="password" placeholder="Password" />
+        {% if password_error %}
+        <p class="error">{{ password_error }}</p>
+        {% endif %}
     </div>
     <div>
-        <input type="text" name="password-confirm" placeholder="Please confirm password"
+        <input type="password" name="password-confirm" placeholder="Please confirm password" />
     </div>
     <div>
         <input type="text" name="email" placeholder="Email (optional)" />
+        {% if email_error %}
+        <p>{{email_error}}</p>
+        {% endif %}
     </div>
     <div>
         <input type="submit" value="Submit" />
