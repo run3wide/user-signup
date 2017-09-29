@@ -5,38 +5,38 @@
 <form action="/confirmation" method="post">
     <div>
         {% if username %}
-        <input type="text" name="username" value="{{username}}" />
+        <input type="text" name="username" value="{{username}}"/>
         {% else %}
-        <input type="text" name="username" placeholder="Username" />
+        <input type="text" name="username" placeholder="Username"/>
         {% endif %}
         {% if username_error %}
         <p class='error'>{{ username_error }}</p>
         {% endif %}
     </div>
     <div>
-        <input type="password" name="password" placeholder="Password" />
+        <input type="password" name="password" placeholder="Password"/>
         {% if password_error %}
         <p class="error">{{ password_error }}</p>
         {% endif %}
     </div>
     <div>
-        <input type="password" name="password-confirm" placeholder="Please confirm password" />
+        <input type="password" name="password-confirm" placeholder="Please confirm password"/>
         {% if confirm_error %}
         <p class="error">{{ confirm_error }}</p>
         {% endif %}
     </div>
     <div>
         {% if email %}
-        <input type="text" name="email" value="{{email}}" />
+        <input type="text" name="email" value="{{email}}"/>
         {% else %}
-        <input type="text" name="email" placeholder="Email (optional)" />
+        <input type="text" name="email" placeholder="Email (optional)"/>
         {% endif %}
         {% if email_error %}
         <p class="error">{{email_error}}</p>
         {% endif %}
     </div>
     <div>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit"/>
     </div>
 </form>
 {% endblock %}
